@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BossHealth : MonoBehaviour
+public class BossModel : MonoBehaviour
 {
 
 	public int maxHealth = 500;
@@ -18,10 +18,11 @@ public class BossHealth : MonoBehaviour
 
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			TakeDamage(20);
-		}
+		// Damage step dealth with in MovingBar.cs
+		// if (Input.GetKeyDown(KeyCode.Space))
+		// {
+		// 	TakeDamage(20);
+		// }
 	}
 
 	public void TakeDamage(int damage)
