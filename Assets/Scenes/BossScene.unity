@@ -669,7 +669,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 285928790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed0bfd5041d357b4e9a80861e9402cd8, type: 3}
+  m_Script: {fileID: 11500000, guid: cb541aece99d71942a6b69eec062f89a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 500
@@ -818,7 +818,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 395953118}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b79cf57c80f9d834abc283f01e6dddaa, type: 3}
+  m_Script: {fileID: 11500000, guid: 93249c1386f592d498b5330fdcba37e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
@@ -1392,6 +1392,7 @@ MonoBehaviour:
   - {fileID: 955371629}
   - {fileID: 1179219847}
   resultText: {fileID: 1596249949}
+  boss: {fileID: 285928793}
 --- !u!114 &1100371497
 MonoBehaviour:
   m_ObjectHideFlags: 0

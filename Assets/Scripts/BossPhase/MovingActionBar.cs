@@ -20,6 +20,9 @@ public class MovingActionBar : MonoBehaviour
 
     public Text resultText;
 
+    // the boss model to deal damage
+    public BossModel boss;
+
     private int pointsIndex;
 
     private bool interacted = false; 
@@ -50,9 +53,17 @@ public class MovingActionBar : MonoBehaviour
         }
         else if (Vector2.Distance(transform.position, resultPoints[1].position) < tolerance) {
             resultText.text = "SWEET";
+            if (interacted) {
+                boss.TakeDamage(75);
+                interacted = false;
+            }
         }
         else {
             resultText.text = "NORMAL";
+            if (interacted) {
+                boss.TakeDamage(30);
+                interacted = false;
+            }
         }
 
         // move bar to pointsIndex position
