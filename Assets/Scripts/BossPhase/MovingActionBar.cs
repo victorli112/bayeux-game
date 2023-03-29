@@ -25,60 +25,73 @@ public class MovingActionBar : MonoBehaviour
 
     private int pointsIndex;
 
-    private bool interacted = false; 
+    // how long from when user declares attack (pauses bar) to when bar becomes available again in seconds
+    private bool inputDisabled = false;
+    private float disableInputDelay = 2.0f;
+    private int bossDamageTaken = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         transform.position = points[startingPoint].position;
+        resultText.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        // check current distance of bar to the next point to determine direction
-        // if bar basically overlaps an endpoint
-        if (Vector2.Distance(transform.position, points[pointsIndex].position) < 0.02f) {
-            pointsIndex++;
-            if (pointsIndex == points.Length) {
-                pointsIndex = 0;
-            }
-        }
-
-        // determine result (miss, sweet spot, normal) based on distance of moving bar to those points
-        float tolerance = 20f;
-        if ((Vector2.Distance(transform.position, resultPoints[0].position) < tolerance) || 
-            (Vector2.Distance(transform.position, resultPoints[2].position) < tolerance)) {
-            resultText.text = "MISS";
-            if (interacted) {
-                // boss doesn't take damage here (MISS)
-                interacted = false;
-            }
-        }
-        else if (Vector2.Distance(transform.position, resultPoints[1].position) < tolerance) {
-            resultText.text = "SWEET";
-            if (interacted) {
-                boss.TakeDamage(75);
-                interacted = false;
-            }
+        if (inputDisabled) {
+            // only thing to do here is to update the disableInputDelay timer, nothing else
+            disableInputDelay -= Time.deltaTime;
         }
         else {
-            resultText.text = "NORMAL";
-            if (interacted) {
-                boss.TakeDamage(30);
-                interacted = false;
+            // movement of bar left <-> right by checking if bar overlaps an endpoint
+            if (Vector2.Distance(transform.position, points[pointsIndex].position) < 0.02f) {
+                pointsIndex++;
+                if (pointsIndex == points.Length) {
+                    pointsIndex = 0;
+                }
             }
-        }
 
-        // move bar to pointsIndex position
-        if (!interacted) {
+            // determine result (miss, sweet spot, normal) based on distance of moving bar to those points
+            float tolerance = 20f;
+            if ((Vector2.Distance(transform.position, resultPoints[0].position) < tolerance) || 
+                (Vector2.Distance(transform.position, resultPoints[2].position) < tolerance)) {
+                resultText.text = "MISS";
+                // boss doesn't take damage here
+                bossDamageTaken = 0;
+            }
+            else if (Vector2.Distance(transform.position, resultPoints[1].position) < tolerance) {
+                resultText.text = "SWEET";
+                bossDamageTaken = 75;
+            }
+            else {
+                resultText.text = "NORMAL";
+                bossDamageTaken = 30;
+            }
+
+            // move bar to pointsIndex position
             transform.position = Vector2.MoveTowards(transform.position, points[pointsIndex].position, speed * Time.deltaTime);
         }
 
-        // space bar stops the movement of bar to get results
+        // space bar stops the movement of bar to get attack results, pausing the bar and any input for
+        // disableInputDelay seconds
         if (Input.GetKeyDown(KeyCode.Space)) {
-            interacted = !interacted;
+            if (!inputDisabled) {
+                inputDisabled = true;
+                resultText.gameObject.SetActive(true);
+                // apply damage calculation immediately, and only once per action
+                boss.TakeDamage(bossDamageTaken);
+            }
+            // if input already disabled, pressing space doesn't do anything
+        }
+
+        // renable input if disableInputDelay seconds reached
+        if (disableInputDelay <= 0.0f) {
+            inputDisabled = false;
+            // hide resultText until next action
+            resultText.gameObject.SetActive(false);
+            disableInputDelay = 3.0f;
         }
     }
 }
-
