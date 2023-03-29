@@ -50,6 +50,10 @@ public class MovingActionBar : MonoBehaviour
         if ((Vector2.Distance(transform.position, resultPoints[0].position) < tolerance) || 
             (Vector2.Distance(transform.position, resultPoints[2].position) < tolerance)) {
             resultText.text = "MISS";
+            if (interacted) {
+                // boss doesn't take damage here (MISS)
+                interacted = false;
+            }
         }
         else if (Vector2.Distance(transform.position, resultPoints[1].position) < tolerance) {
             resultText.text = "SWEET";
