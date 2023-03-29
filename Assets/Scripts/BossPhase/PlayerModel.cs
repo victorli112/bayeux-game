@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealthBossPhase : MonoBehaviour
+public class PlayerModel : MonoBehaviour
 {
     public int maxHealth = 100;
 	public int currentHealth;
