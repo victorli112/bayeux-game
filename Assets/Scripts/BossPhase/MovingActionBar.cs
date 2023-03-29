@@ -89,9 +89,8 @@ public class MovingActionBar : MonoBehaviour
         // renable input if disableInputDelay seconds reached
         if (disableInputDelay <= 0.0f) {
             inputDisabled = false;
-            // hide resultText until next action
-            resultText.gameObject.SetActive(false);
             disableInputDelay = 3.0f;
+            Start();
         }
     }
 }
