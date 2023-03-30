@@ -5,54 +5,51 @@ using UnityEngine.UI;
 
 public class MovingActionBar : MonoBehaviour
 {
-    // speed to move left <-> right
+    // speed to move from left -> right
     public float speed;
-    // starting index for bar
-    public int startingPoint;
-    // list of transform points
-    public RectTransform[] points;
 
-    // list of points to detect result (left/right miss, sweet spot, everything else is normal)
-    // index 0 = left miss
-    // index 1 = sweet spot
-    // index 2 = right miss
-    public RectTransform[] resultPoints;
+    // point to start the bar
+    public RectTransform leftPoint;
+    
+    // point the bar ends if no action before
+    public RectTransform rightPoint;
 
-    public Text resultText;
+    public RectTransform sweetPoint;
 
-    // the boss model to deal damage
+    public TMPro.TextMeshProUGUI resultText;
+
+    // the boss model to deal damage to
     public BossModel boss;
 
-    private int pointsIndex;
+    // determines if user has done their action before bar reaches end
+    private bool userInteracted;
 
-    // how long from when user declares attack (pauses bar) to when bar becomes available again in seconds
+    // used during damage calculation
+    private int bossDamageTaken;
+
     private bool inputDisabled = false;
     private float disableInputDelay = 2.0f;
-    private int bossDamageTaken = 0;
+    private int pointsIndex;
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = points[startingPoint].position;
+        // use at start (initialize) or to "reset" the state
+        transform.position = leftPoint.position;
         resultText.gameObject.SetActive(false);
+        userInteracted = false;
+        bossDamageTaken = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        /*
         if (inputDisabled) {
             // only thing to do here is to update the disableInputDelay timer, nothing else
             disableInputDelay -= Time.deltaTime;
         }
         else {
-            // movement of bar left <-> right by checking if bar overlaps an endpoint
-            if (Vector2.Distance(transform.position, points[pointsIndex].position) < 0.02f) {
-                pointsIndex++;
-                if (pointsIndex == points.Length) {
-                    pointsIndex = 0;
-                }
-            }
-
             // determine result (miss, sweet spot, normal) based on distance of moving bar to those points
             float tolerance = 20f;
             if ((Vector2.Distance(transform.position, resultPoints[0].position) < tolerance) || 
@@ -93,5 +90,6 @@ public class MovingActionBar : MonoBehaviour
             resultText.gameObject.SetActive(false);
             disableInputDelay = 3.0f;
         }
+        */
     }
 }
