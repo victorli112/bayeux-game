@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f64f2ad4bdb8bf64392dcba9f313398b
+guid: cb71d6ef0db4c9e41a4f294dcf0160d8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: boss_standing_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 0
+        width: 45
+        height: 79
+      alignment: 9
+      pivot: {x: 0.666, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f827959727fcc4fa1371c3c7f03e36
+      internalID: 640209628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_standing_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 0
+        width: 46
+        height: 79
+      alignment: 9
+      pivot: {x: 0.7605, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6568bdcb77fb40d40ada5a778a73cd74
+      internalID: -1688418407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_standing_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 0
+        width: 48
+        height: 79
+      alignment: 9
+      pivot: {x: 0.7915, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6df63dc06e4ba24cbd28c7f37eeecb8
+      internalID: 37599142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_standing_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 0
+        width: 49
+        height: 81
+      alignment: 9
+      pivot: {x: 0.8773, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c83848246bc5bfd4bbfe5853039ec06d
+      internalID: -380552203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_standing_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 0
+        width: 54
+        height: 82
+      alignment: 9
+      pivot: {x: 0.8885, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d75fa76e59a6ac4ba6b546d803d1abb
+      internalID: 829568679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,10 +231,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      boss_standing_spritesheet_0: 640209628
+      boss_standing_spritesheet_1: -1688418407
+      boss_standing_spritesheet_2: 37599142
+      boss_standing_spritesheet_3: -380552203
+      boss_standing_spritesheet_4: 829568679
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
+  pSDShowRemoveMatteOption: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 
