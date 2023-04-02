@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MovingActionBar : MonoBehaviour
 {
+    /*
     // speed to move from left -> right
     public float speed;
 
@@ -44,7 +45,7 @@ public class MovingActionBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
+        
         if (inputDisabled) {
             // only thing to do here is to update the disableInputDelay timer, nothing else
             disableInputDelay -= Time.deltaTime;
@@ -90,6 +91,7 @@ public class MovingActionBar : MonoBehaviour
             resultText.gameObject.SetActive(false);
             disableInputDelay = 3.0f;
         }
-        */
+    
     }
+    */
 }
