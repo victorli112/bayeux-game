@@ -1871,7 +1871,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fe1e21f7574e4b042952a6c8df8d0609, type: 3}
+  m_Sprite: {fileID: 640209628, guid: cb71d6ef0db4c9e41a4f294dcf0160d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1922,10 +1922,17 @@ Animator:
   m_GameObject: {fileID: 285928790}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
+<<<<<<< HEAD
+  m_Controller: {fileID: 9100000, guid: 5d720f008c2a04d4da7b2530ae4235f7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+=======
   m_Controller: {fileID: 9100000, guid: 4fed82dd6c9b21d478bf17343b403681, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
+>>>>>>> master
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -1933,6 +1940,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+<<<<<<< HEAD
+=======
 --- !u!1 &321751895
 GameObject:
   m_ObjectHideFlags: 0
@@ -2032,6 +2041,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 321751895}
   m_CullTransparentMesh: 1
+>>>>>>> master
 --- !u!1 &374147627
 GameObject:
   m_ObjectHideFlags: 0
@@ -2242,8 +2252,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.59, y: 0.78}
+    pivot: {x: 0.268, y: 0}
+    oldSize: {x: 0.71, y: 0.78}
     newSize: {x: 0.59, y: 0.78}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2293,7 +2303,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1249393097, guid: 3d16c846fe132fb45bbd48f9d7cab0e8, type: 3}
+  m_Sprite: {fileID: -437795788, guid: 94cd10ecb795cea4e8f1fa9b9de2de4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2312,7 +2322,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395953118}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.6099854, y: 8.719971, z: -1}
+  m_LocalPosition: {x: 4.52, y: 3.44, z: -1}
   m_LocalScale: {x: 13, y: 13, z: 13}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2347,7 +2357,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 1b55c4860f7ad404ea9b2fa34871e442, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
