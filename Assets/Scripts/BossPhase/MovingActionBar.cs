@@ -10,13 +10,20 @@ public class MovingActionBar : MonoBehaviour
     // speed the bar will move from left -> right
     public float speed;
 
+    // moving bar for VISUAL
     public RectTransform movingActionBar;
+
+    // (invisible) moving bar for ACTUAL RESULTS CALCULATION
+    public RectTransform movingActionBarInternal;
 
     // point to start the bar
     public RectTransform startPoint;
     
-    // point the bar ends if no action before
+    // point the bar ends for VISUAL
     public RectTransform endPoint;
+
+    // (invisible) actual end where an attack MISSES if no input
+    public RectTransform endPointInternal;
 
     public RectTransform sweetPoint;
 
@@ -31,7 +38,10 @@ public class MovingActionBar : MonoBehaviour
     // set to true on user input before bar reaches MISS, or if no input by the time MISS is triggered
     private bool actionFinished;
 
+    private bool visualMovingActionBarEnd;
+
     public void MovingActionBarEvent() {
+        transform.gameObject.SetActive(true);
         StartCoroutine(MovingActionBarEventHandler());
     }
 
@@ -39,8 +49,7 @@ public class MovingActionBar : MonoBehaviour
     public IEnumerator MovingActionBarEventHandler() {
         yield return StartCoroutine(InitBar());
         yield return StartCoroutine(StartBarMove());
-        yield return StartCoroutine(DisableBar());
-        yield return StartCoroutine(MainActionMenuReturn());
+        yield return StartCoroutine(EndEvent());
     }
 
     public IEnumerator InitBar() {
@@ -49,7 +58,8 @@ public class MovingActionBar : MonoBehaviour
         // some safety checks and "resetters" here
         actionFinished = false;
         movingActionBar.position = startPoint.position;
-        resultText.gameObject.SetActive(false);
+        movingActionBarInternal.position = startPoint.position;
+        visualMovingActionBarEnd = false;
         bossDamageTaken = 0;
         canvGroup.alpha = 0;
 
@@ -60,23 +70,27 @@ public class MovingActionBar : MonoBehaviour
             canvGroup.alpha = Mathf.Lerp(canvGroup.alpha, 1, timeCounter / fadeDuration);
             yield return null;
         }
-        // TODO: user can't click on any menu options while the action bar event is active
+        resultText.gameObject.SetActive(false);
+        // TODO: disable attack menu options
     }
 
     public IEnumerator StartBarMove() {
         // while no finished action, keep moving the bar and doing distance checks
         while (!actionFinished) {
             // 1. move bar towards the endPoint
-            movingActionBar.position = Vector2.MoveTowards(movingActionBar.position, endPoint.position, speed * Time.deltaTime);
+            if (!visualMovingActionBarEnd) {
+                movingActionBar.position = Vector2.MoveTowards(movingActionBar.position, endPoint.position, speed * Time.deltaTime);
+            }
+            movingActionBarInternal.position = Vector2.MoveTowards(movingActionBarInternal.position, endPointInternal.position, speed * Time.deltaTime);
 
             // 2. calculate distances, determine result (miss, sweet spot, normal), calculate damage to give to boss
             // based on distance of moving bar to those points
-            float tolerance = 0.5f;
+            float tolerance = 40f;
             // case 1: user interacted before bar reached end
             if (Input.GetKeyDown(KeyCode.Space)) {
                 actionFinished = true;
                 // immediately calculate the current position, will be either a NORMAL or SWEET attack
-                if (Vector2.Distance(movingActionBar.position, sweetPoint.position) < tolerance) {
+                if (Vector2.Distance(movingActionBarInternal.position, sweetPoint.position) < tolerance) {
                     resultText.text = "SWEET!";
                     bossDamageTaken = 75;
                 }
@@ -87,7 +101,10 @@ public class MovingActionBar : MonoBehaviour
             }
             // case 2: bar reaches end without user input
             else {
-                if (Vector2.Distance(movingActionBar.position, endPoint.position) < tolerance) {
+                if (Vector2.Distance(movingActionBar.position, endPointInternal.position) < tolerance) {
+                    visualMovingActionBarEnd = true;
+                }
+                if (Vector2.Distance(movingActionBarInternal.position, endPointInternal.position) < tolerance) {
                     resultText.text = "MISS";
                     // boss doesn't take damage here
                     bossDamageTaken = 0;
@@ -101,115 +118,21 @@ public class MovingActionBar : MonoBehaviour
 
         // here action is finished
         resultText.gameObject.SetActive(true);
+        boss.TakeDamage(bossDamageTaken);
     }
 
-    public IEnumerator DisableBar() {
+    public IEnumerator EndEvent() {
         // after damage calculation and some time for attack animation sequences, disable the bar 
-        /*
-        var canvGroup = GetComponent<CanvasGroup>();
-        // here we fade out the action bar from alpha 1 -> 0
+        float timeBeforeDisable = 3.0f;
         float timeCounter = 0f;
-        while (timeCounter < fadeDuration) {
+        while (timeCounter < timeBeforeDisable) {
             timeCounter += Time.deltaTime;
-            canvGroup.alpha = Mathf.Lerp(canvGroup.alpha, 0, timeCounter / fadeDuration);
             yield return null;
         }
-        */
-        yield return null;
-    }
-
-    public IEnumerator MainActionMenuReturn() {
-        // TOOD: setActive false here or not needed? (maybe not needed as the actionFinished flag false)
+        // here timeBeforeDisable finish, remove the bar from the screen
+        transform.gameObject.SetActive(false);
         // TODO: re-enable menu options, go back to main action menu
-        yield return null;
-    }
-    /*
-    // speed to move from left -> right
-    public float speed;
-
-    // point to start the bar
-    public RectTransform leftPoint;
-    
-    // point the bar ends if no action before
-    public RectTransform rightPoint;
-
-    public RectTransform sweetPoint;
-
-    public TMPro.TextMeshProUGUI resultText;
-
-    // the boss model to deal damage to
-    public BossModel boss;
-
-    // determines if user has done their action before bar reaches end
-    private bool userInteracted;
-
-    // used during damage calculation
-    private int bossDamageTaken;
-
-    private bool inputDisabled = false;
-    private float disableInputDelay = 2.0f;
-    private int pointsIndex;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        // use at start (initialize) or to "reset" the state
-        transform.position = leftPoint.position;
-        resultText.gameObject.SetActive(false);
-        userInteracted = false;
-        bossDamageTaken = 0;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
-        if (inputDisabled) {
-            // only thing to do here is to update the disableInputDelay timer, nothing else
-            disableInputDelay -= Time.deltaTime;
-        }
-        else {
-            // determine result (miss, sweet spot, normal) based on distance of moving bar to those points
-            float tolerance = 20f;
-            if ((Vector2.Distance(transform.position, resultPoints[0].position) < tolerance) || 
-                (Vector2.Distance(transform.position, resultPoints[2].position) < tolerance)) {
-                resultText.text = "MISS";
-                // boss doesn't take damage here
-                bossDamageTaken = 0;
-            }
-            else if (Vector2.Distance(transform.position, resultPoints[1].position) < tolerance) {
-                resultText.text = "SWEET";
-                bossDamageTaken = 75;
-            }
-            else {
-                resultText.text = "NORMAL";
-                bossDamageTaken = 30;
-            }
-
-            // move bar to pointsIndex position
-            transform.position = Vector2.MoveTowards(transform.position, points[pointsIndex].position, speed * Time.deltaTime);
-        }
-
-        // space bar stops the movement of bar to get attack results, pausing the bar and any input for
-        // disableInputDelay seconds
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            if (!inputDisabled) {
-                inputDisabled = true;
-                resultText.gameObject.SetActive(true);
-                // apply damage calculation immediately, and only once per action
-                boss.TakeDamage(bossDamageTaken);
-            }
-            // if input already disabled, pressing space doesn't do anything
-        }
-
-        // renable input if disableInputDelay seconds reached
-        if (disableInputDelay <= 0.0f) {
-            inputDisabled = false;
-            // hide resultText until next action
-            resultText.gameObject.SetActive(false);
-            disableInputDelay = 3.0f;
-        }
-    
     }
-    */
+
 }
