@@ -13,7 +13,7 @@ public class ButtonMashing : MonoBehaviour {
       private string prevKey = "";
 
       // how long the user amash for
-      public float mashDuration = 5f;
+      public float mashDuration = 7.5f;
 
       // the final result text with the damage dealth
       public TMPro.TextMeshProUGUI resultText;
@@ -68,7 +68,7 @@ public class ButtonMashing : MonoBehaviour {
         }
         
         // damage calculation step
-        damageDealt = (mashAmount / 3) * 2;
+        damageDealt = mashAmount * 2;
         boss.TakeDamage(damageDealt);
         Debug.Log(damageDealt.ToString() + " dealt, mash amount: " + mashAmount.ToString());
       }

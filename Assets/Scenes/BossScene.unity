@@ -226,7 +226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &20260156
 RectTransform:
   m_ObjectHideFlags: 0
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e5f54a2247baf04598f58ed6654b3d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mashDuration: 10
+  mashDuration: 7.5
   resultText: {fileID: 1942584786}
   boss: {fileID: 285928793}
 --- !u!222 &20260158
