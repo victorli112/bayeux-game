@@ -19,10 +19,6 @@ public class ButtonMashing : MonoBehaviour {
       public TMPro.TextMeshProUGUI resultText;
 
       public BossModel boss;
-
-      void Start() {
-        transform.gameObject.SetActive(false);
-      }
       
       public void ButtonMashingEvent() {
         Debug.Log("ButtonMashingEvent");
