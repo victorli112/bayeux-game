@@ -1890,7 +1890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285928790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.87, y: 8.81, z: -1.8}
+  m_LocalPosition: {x: 31.87, y: 3.64, z: -1.8}
   m_LocalScale: {x: 13, y: 13, z: 13}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1984,6 +1984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47459516f32d6cd43a60b212876a1ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actionMenuActive: 0
   fadeDuration: 0
   speed: 0
   movingActionBar: {fileID: 0}
@@ -2312,7 +2313,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395953118}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.52, y: 3.44, z: -1}
+  m_LocalPosition: {x: 4.52, y: 3.62, z: -1}
   m_LocalScale: {x: 13, y: 13, z: 13}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3131,6 +3132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47459516f32d6cd43a60b212876a1ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actionMenuActive: 0
   fadeDuration: 1
   speed: 500
   movingActionBar: {fileID: 1100371495}
@@ -4663,6 +4665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47459516f32d6cd43a60b212876a1ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actionMenuActive: 0
   fadeDuration: 0
   speed: 0
   movingActionBar: {fileID: 0}
@@ -8087,7 +8090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}

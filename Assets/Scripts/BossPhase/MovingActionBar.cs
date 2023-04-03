@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MovingActionBar : MonoBehaviour
 {
+
     public float fadeDuration;
 
     // speed the bar will move from left -> right
@@ -40,7 +41,23 @@ public class MovingActionBar : MonoBehaviour
 
     private bool visualMovingActionBarEnd;
 
+    private bool isActionMenuActive() {
+        var canvGroup = GetComponent<CanvasGroup>();
+        // action menu active if this canvas group's (attack menu canvas group) alpha is 0
+        return Mathf.Approximately(canvGroup.alpha, 0f);
+    }
+
     public void MovingActionBarEvent() {
+        Debug.Log(isActionMenuActive());
+        /*
+        if (!isActionMenuActive()) {
+            transform.gameObject.SetActive(true);
+            StartCoroutine(MovingActionBarEventHandler());
+        }
+        else {
+            // Coroutine for special attack here
+        }
+        */
         transform.gameObject.SetActive(true);
         StartCoroutine(MovingActionBarEventHandler());
     }
@@ -132,7 +149,7 @@ public class MovingActionBar : MonoBehaviour
         // here timeBeforeDisable finish, remove the bar from the screen
         transform.gameObject.SetActive(false);
         // TODO: re-enable menu options, go back to main action menu
-        
+
     }
 
 }
