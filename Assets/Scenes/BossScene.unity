@@ -9369,11 +9369,7 @@ RectTransform:
   m_Children:
   - {fileID: 239220054}
   - {fileID: 1005439762}
-<<<<<<< HEAD
-  - {fileID: 20260156}
-=======
   - {fileID: 1016519082}
->>>>>>> b5950a3efddff7ca024f283f8178615e85caed18
   - {fileID: 683448202}
   - {fileID: 381620622}
   - {fileID: 1472400663}
