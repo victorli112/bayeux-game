@@ -218,7 +218,6 @@ GameObject:
   - component: {fileID: 20260156}
   - component: {fileID: 20260158}
   - component: {fileID: 20260157}
-  - component: {fileID: 20260159}
   - component: {fileID: 20260160}
   m_Layer: 5
   m_Name: ButtonMasher
@@ -226,7 +225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &20260156
 RectTransform:
   m_ObjectHideFlags: 0
@@ -271,18 +270,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20260155}
   m_CullTransparentMesh: 1
---- !u!225 &20260159
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 20260155}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!114 &20260160
 MonoBehaviour:
   m_ObjectHideFlags: 0
