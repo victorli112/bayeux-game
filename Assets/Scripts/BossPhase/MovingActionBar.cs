@@ -8,6 +8,10 @@ public class MovingActionBar : MonoBehaviour
 
     public float fadeDuration;
 
+    public AudioSource SweetSpot;
+    public AudioSource Miss;
+    public AudioSource Normal;
+
     // speed the bar will move from left -> right
     public float speed;
 
@@ -112,10 +116,14 @@ public class MovingActionBar : MonoBehaviour
                 if (Vector2.Distance(movingActionBarInternal.position, sweetPoint.position) < tolerance) {
                     resultText.text = "SWEET!";
                     bossDamageTaken = 75;
+                    
+                    SweetSpot.Play();
                 }
                 else {
                     resultText.text = "NORMAL";
                     bossDamageTaken = 30;
+
+                    Normal.Play();
                 }
             }
             // case 2: bar reaches end without user input
@@ -128,6 +136,8 @@ public class MovingActionBar : MonoBehaviour
                     // boss doesn't take damage here
                     bossDamageTaken = 0;
                     actionFinished = true;
+
+                    Miss.Play();
                 }
             }
 
