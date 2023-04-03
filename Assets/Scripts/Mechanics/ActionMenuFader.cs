@@ -5,7 +5,7 @@ using UnityEngine;
 public class ActionMenuFader : MonoBehaviour
 {
     public bool actionMenuActive = true;
-    public float fadeDuration = 0.4f;
+    public float fadeDuration;
 
     public CanvasGroup attackMenuCanvasGroup;
 
@@ -30,7 +30,5 @@ public class ActionMenuFader : MonoBehaviour
 
             yield return null;
         }
-
-        Debug.Log(attackMenuCanvasGroup.alpha);
     }
 }
