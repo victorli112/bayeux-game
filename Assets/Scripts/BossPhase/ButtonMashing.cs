@@ -20,10 +20,10 @@ public class ButtonMashing : MonoBehaviour {
 
       public BossModel boss;
 
-      public void Start() {
+      void Start() {
         transform.gameObject.SetActive(false);
       }
-
+      
       public void ButtonMashingEvent() {
         Debug.Log("ButtonMashingEvent");
         transform.gameObject.SetActive(true);
@@ -38,6 +38,7 @@ public class ButtonMashing : MonoBehaviour {
 
       public IEnumerator InitializeMasher() {
         mashAmount = 0;
+        transform.gameObject.SetActive(true);
         yield return null;
       }
 
