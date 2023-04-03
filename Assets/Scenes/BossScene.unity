@@ -1922,17 +1922,10 @@ Animator:
   m_GameObject: {fileID: 285928790}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-<<<<<<< HEAD
   m_Controller: {fileID: 9100000, guid: 5d720f008c2a04d4da7b2530ae4235f7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
-=======
-  m_Controller: {fileID: 9100000, guid: 4fed82dd6c9b21d478bf17343b403681, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
->>>>>>> master
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -1940,8 +1933,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
-<<<<<<< HEAD
-=======
 --- !u!1 &321751895
 GameObject:
   m_ObjectHideFlags: 0
@@ -2041,7 +2032,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 321751895}
   m_CullTransparentMesh: 1
->>>>>>> master
 --- !u!1 &374147627
 GameObject:
   m_ObjectHideFlags: 0
