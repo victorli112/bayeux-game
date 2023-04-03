@@ -8,6 +8,7 @@ public class ActionMenuFader : MonoBehaviour
     public float fadeDuration;
 
     public CanvasGroup attackMenuCanvasGroup;
+    
 
     public void Fade() {
         // fade in attack menu
