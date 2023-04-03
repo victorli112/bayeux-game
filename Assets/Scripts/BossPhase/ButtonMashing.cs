@@ -13,7 +13,7 @@ public class ButtonMashing : MonoBehaviour {
       private string prevKey = "";
 
       // how long the user amash for
-      public float mashDuration = 10f;
+      public float mashDuration = 5f;
 
       // the final result text with the damage dealth
       public TMPro.TextMeshProUGUI resultText;
@@ -77,7 +77,7 @@ public class ButtonMashing : MonoBehaviour {
         resultText.text = damageDealt.ToString();
         resultText.gameObject.SetActive(true);
         transform.gameObject.SetActive(false);
-        float timeBeforeDisable = 2.0f;
+        float timeBeforeDisable = 3.0f;
         float timeCounter = 0f;
         while (timeCounter < timeBeforeDisable) {
           timeCounter += Time.deltaTime;
