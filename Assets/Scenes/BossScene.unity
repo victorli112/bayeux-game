@@ -2567,8 +2567,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionMenuActive: 1
-  fadeDuration: 0.3
+  fadeDuration: 0.35
   attackMenuCanvasGroup: {fileID: 1260975986}
+  Return: {fileID: 1336811276}
+  Slash: {fileID: 441055469}
+  Cleave: {fileID: 824668850}
+  AttackButton: {fileID: 26454271}
+  SpecialButton: {fileID: 1923525467}
+  Dialogue: {fileID: 141630862}
 --- !u!1 &395953118
 GameObject:
   m_ObjectHideFlags: 0
