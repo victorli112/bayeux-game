@@ -72,6 +72,8 @@ public class MovingActionBar : MonoBehaviour
     public IEnumerator InitBar() {
         var canvGroup = GetComponent<CanvasGroup>();
 
+        resultText.text = "";
+
         // some safety checks and "resetters" here
         actionFinished = false;
         movingActionBar.position = startPoint.position;
