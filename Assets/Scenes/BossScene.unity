@@ -2678,7 +2678,6 @@ GameObject:
   m_Component:
   - component: {fileID: 395953122}
   - component: {fileID: 395953121}
-  - component: {fileID: 395953120}
   - component: {fileID: 395953119}
   - component: {fileID: 395953123}
   - component: {fileID: 395953124}
@@ -2710,32 +2709,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &395953120
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395953118}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.268, y: 0}
-    oldSize: {x: 0.71, y: 0.78}
-    newSize: {x: 0.59, y: 0.78}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.096, y: 2.048}
-  m_EdgeRadius: 0
 --- !u!212 &395953121
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2778,7 +2751,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -437795788, guid: 94cd10ecb795cea4e8f1fa9b9de2de4f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9843137}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9268,6 +9241,7 @@ GameObject:
   - component: {fileID: 1814687562}
   - component: {fileID: 1814687561}
   - component: {fileID: 1814687565}
+  - component: {fileID: 1814687566}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -9377,6 +9351,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audio: {fileID: 1161152920}
+--- !u!114 &1814687566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814687560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a6ae97a77f1ad4ab85f5d8a5019d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hero: {fileID: 395953121}
+  boss: {fileID: 285928791}
+  fadeDuration: 0.05
 --- !u!1 &1855104306
 GameObject:
   m_ObjectHideFlags: 0
