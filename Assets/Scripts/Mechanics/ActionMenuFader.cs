@@ -8,7 +8,6 @@ public class ActionMenuFader : MonoBehaviour
     public float fadeDuration;
 
     public CanvasGroup attackMenuCanvasGroup;
-    
 
     public GameObject Return;
     public GameObject Slash;

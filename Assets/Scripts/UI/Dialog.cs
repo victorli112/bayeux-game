@@ -6,15 +6,27 @@ using TMPro;
 public class Dialog : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
+    public float fadeDuration;
     public string[] lines;
     public float textSpeed;
     
     private int linesIndex;
 
+    public CanvasGroup attackMenuCanvasGroup;
+
+    public GameObject AttackButton;
+    public GameObject SpecialButton;
+    public GameObject Dialogue;
+
     // Start is called before the first frame update
     void Start()
     {
+        AttackButton.gameObject.SetActive(false);
+        SpecialButton.gameObject.SetActive(false);
+        Dialogue.gameObject.SetActive(false);
+
         textComponent.text = string.Empty;
+        
         StartDialog();
     }
 
@@ -54,7 +66,12 @@ public class Dialog : MonoBehaviour
         }
         // reach last line, any action after -> remove the dialog
         else {
+            AttackButton.gameObject.SetActive(true);
+            SpecialButton.gameObject.SetActive(true);
+            Dialogue.gameObject.SetActive(true);
             gameObject.SetActive(false);
+            
         }
     }
+
 }

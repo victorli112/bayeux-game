@@ -2688,7 +2688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &377213927
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2861,7 +2861,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 3
 --- !u!212 &395953121
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6514,10 +6514,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 626978190}
+  fadeDuration: 0
   lines:
   - Anyone there?
   - Hello? Testing testing 123
   textSpeed: 0.2
+  attackMenuCanvasGroup: {fileID: 381620624}
+  AttackButton: {fileID: 26454271}
+  SpecialButton: {fileID: 1923525467}
+  Dialogue: {fileID: 141630862}
 --- !u!1 &1253515852
 GameObject:
   m_ObjectHideFlags: 0
