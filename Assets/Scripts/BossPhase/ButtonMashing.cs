@@ -18,11 +18,15 @@ public class ButtonMashing : MonoBehaviour {
       // the final result text with the damage dealth
       public TMPro.TextMeshProUGUI resultText;
 
+      public Image buttonMashingImage;
+
       public BossModel boss;
       
       public void ButtonMashingEvent() {
         Debug.Log("ButtonMashingEvent");
         transform.gameObject.SetActive(true);
+        buttonMashingImage.gameObject.SetActive(true);
+        resultText.gameObject.SetActive(false);
         StartCoroutine(ButtonMashEventHandler());
       }
 
@@ -34,7 +38,6 @@ public class ButtonMashing : MonoBehaviour {
 
       public IEnumerator InitializeMasher() {
         mashAmount = 0;
-        transform.gameObject.SetActive(true);
         yield return null;
       }
 
@@ -51,11 +54,9 @@ public class ButtonMashing : MonoBehaviour {
             if (isA && prevKey == "D") {
               prevKey = "A";
               mashAmount++;
-              Debug.Log("press A");
             } else if (isD && prevKey == "A") {
               prevKey = "D";
               mashAmount++;
-              Debug.Log("press D");
             } else if (prevKey == "") {
               prevKey = isA ? "A" : "D";
               mashAmount++;
@@ -71,15 +72,18 @@ public class ButtonMashing : MonoBehaviour {
       }
 
       public IEnumerator ShowFinalDamage() {
+        Debug.Log("before");
+        var canvGroup = GetComponent<CanvasGroup>();
         resultText.text = damageDealt.ToString();
         resultText.gameObject.SetActive(true);
-        transform.gameObject.SetActive(false);
-        float timeBeforeDisable = 3.0f;
+        buttonMashingImage.gameObject.SetActive(false);
         float timeCounter = 0f;
-        while (timeCounter < timeBeforeDisable) {
-          timeCounter += Time.deltaTime;
+        float timeBeforeDisable = 3.0f;
+        while (timeCounter <= 1f) {
+          timeCounter += Time.deltaTime / timeBeforeDisable;
           yield return null;
         }
         resultText.gameObject.SetActive(false);
-      }
+        transform.gameObject.SetActive(false);
+      }   
 }
