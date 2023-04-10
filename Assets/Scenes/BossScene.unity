@@ -2496,7 +2496,7 @@ GameObject:
   - component: {fileID: 362951522}
   - component: {fileID: 362951521}
   m_Layer: 5
-  m_Name: BossHead (1)
+  m_Name: HeroHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6489,8 +6489,8 @@ MonoBehaviour:
   textComponent: {fileID: 626978190}
   fadeDuration: 0
   lines:
-  - Anyone there?
-  - Hello? Testing testing 123
+  - '[H]Anyone there?'
+  - '[B]Hello? Testing testing 123'
   textSpeed: 0.2
   attackMenuCanvasGroup: {fileID: 381620624}
   AttackButton: {fileID: 26454271}
