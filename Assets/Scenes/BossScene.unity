@@ -11039,7 +11039,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942584784}
   m_CullTransparentMesh: 1
-<<<<<<< Updated upstream
 --- !u!1 &1948088165
 GameObject:
   m_ObjectHideFlags: 0
@@ -11160,8 +11159,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948088165}
   m_CullTransparentMesh: 1
-=======
->>>>>>> Stashed changes
 --- !u!1 &1951821091
 GameObject:
   m_ObjectHideFlags: 0
