@@ -6407,7 +6407,7 @@ GameObject:
   - component: {fileID: 1249137510}
   - component: {fileID: 1249137512}
   m_Layer: 5
-  m_Name: DialogPanel
+  m_Name: IntroDialogPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6488,14 +6488,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 626978190}
   fadeDuration: 0
-  lines:
-  - '[H]Anyone there?'
-  - '[B]Hello? Testing testing 123'
+  dialogLines:
+  - '[H]Hero Line 1'
+  - '[B]Boss Line 1'
+  - '[H]Hero Line 2'
+  - '[B]Boss Line 2'
   textSpeed: 0.2
   attackMenuCanvasGroup: {fileID: 381620624}
   AttackButton: {fileID: 26454271}
   SpecialButton: {fileID: 1923525467}
   Dialogue: {fileID: 141630862}
+  bossHeadImage: {fileID: 377213928}
+  heroHeadImage: {fileID: 362951521}
 --- !u!1 &1253515852
 GameObject:
   m_ObjectHideFlags: 0
@@ -10760,7 +10764,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -6, y: 98}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1980250867
