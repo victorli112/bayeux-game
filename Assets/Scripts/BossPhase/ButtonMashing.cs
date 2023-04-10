@@ -18,15 +18,18 @@ public class ButtonMashing : MonoBehaviour {
       // the final result text with the damage dealth
       public TMPro.TextMeshProUGUI resultText;
 
-      public Image buttonMashingImage;
-
       public BossModel boss;
+
+      public Animator aKey;
+       
+      public Animator dKey;
       
       public void ButtonMashingEvent() {
         Debug.Log("ButtonMashingEvent");
         transform.gameObject.SetActive(true);
-        buttonMashingImage.gameObject.SetActive(true);
         resultText.gameObject.SetActive(false);
+        aKey.gameObject.SetActive(true);
+        dKey.gameObject.SetActive(true);
         StartCoroutine(ButtonMashEventHandler());
       }
 
@@ -73,10 +76,11 @@ public class ButtonMashing : MonoBehaviour {
 
       public IEnumerator ShowFinalDamage() {
         Debug.Log("before");
+        aKey.gameObject.SetActive(false);
+        dKey.gameObject.SetActive(false);
         var canvGroup = GetComponent<CanvasGroup>();
         resultText.text = damageDealt.ToString();
         resultText.gameObject.SetActive(true);
-        buttonMashingImage.gameObject.SetActive(false);
         float timeCounter = 0f;
         float timeBeforeDisable = 3.0f;
         while (timeCounter <= 1f) {
