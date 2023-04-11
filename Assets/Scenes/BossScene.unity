@@ -2086,6 +2086,7 @@ MonoBehaviour:
   sweetPoint: {fileID: 0}
   resultText: {fileID: 0}
   boss: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &251598105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2659,6 +2660,7 @@ MonoBehaviour:
   sweetPoint: {fileID: 0}
   resultText: {fileID: 0}
   boss: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &321751898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3216,6 +3218,7 @@ MonoBehaviour:
   sweetPoint: {fileID: 0}
   resultText: {fileID: 0}
   boss: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &429433781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4115,6 +4118,7 @@ MonoBehaviour:
   sweetPoint: {fileID: 955371629}
   resultText: {fileID: 277957207}
   boss: {fileID: 285928793}
+  player: {fileID: 395953124}
 --- !u!1 &684835446
 GameObject:
   m_ObjectHideFlags: 0
@@ -5999,6 +6003,7 @@ MonoBehaviour:
   sweetPoint: {fileID: 1253515853}
   resultText: {fileID: 1642690215}
   boss: {fileID: 285928793}
+  player: {fileID: 395953124}
 --- !u!225 &1016519084
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -6241,6 +6246,7 @@ MonoBehaviour:
   sweetPoint: {fileID: 0}
   resultText: {fileID: 0}
   boss: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &1100371497
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -37,6 +37,9 @@ public class MovingActionBar : MonoBehaviour
     // the boss model to deal damage to
     public BossModel boss;
 
+    // the player to trigger animation
+    public Animator player;
+
     // used during damage calculation
     private int bossDamageTaken;
 
@@ -116,13 +119,13 @@ public class MovingActionBar : MonoBehaviour
                 if (Vector2.Distance(movingActionBarInternal.position, sweetPoint.position) < tolerance) {
                     resultText.text = "SWEET!";
                     bossDamageTaken = 75;
-                    
+                    player.SetTrigger("Attack");
                     SweetSpot.Play();
                 }
                 else {
                     resultText.text = "NORMAL";
                     bossDamageTaken = 30;
-
+                    player.SetTrigger("Attack");
                     Normal.Play();
                 }
             }
