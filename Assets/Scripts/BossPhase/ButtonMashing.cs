@@ -9,6 +9,8 @@ public class ButtonMashing : MonoBehaviour {
 
       private int damageDealt;
 
+      public AudioSource arrow;
+
       // keep track of the previous key, player must alternate between A and D
       private string prevKey = "";
 
@@ -78,6 +80,7 @@ public class ButtonMashing : MonoBehaviour {
         Debug.Log("before");
         aKey.gameObject.SetActive(false);
         dKey.gameObject.SetActive(false);
+        arrow.Play();
         var canvGroup = GetComponent<CanvasGroup>();
         resultText.text = damageDealt.ToString();
         resultText.gameObject.SetActive(true);
