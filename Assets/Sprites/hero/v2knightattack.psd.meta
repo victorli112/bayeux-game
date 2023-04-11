@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5288b272134f16143ade2dc41e7e2e53
+guid: bf469b9df59080845a78b49c0963a2eb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -67,10 +67,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -115,112 +115,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: knight_attack_spritesheet_0
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 0
-        width: 59
-        height: 78
-      alignment: 9
-      pivot: {x: 0.661, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20bca93ccb5554344921697ae9fc9742
-      internalID: -634472916
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: knight_attack_spritesheet_1
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 0
-        width: 102
-        height: 78
-      alignment: 9
-      pivot: {x: 0.441, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 13f1ea19b123b164aa9f2b9526961542
-      internalID: 617390678
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: knight_attack_spritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 271
-        y: 0
-        width: 100
-        height: 78
-      alignment: 9
-      pivot: {x: 0.409, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4ee507beea7dae4882985e615d42ab7
-      internalID: -1130467226
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: knight_attack_spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 402
-        y: 0
-        width: 100
-        height: 77
-      alignment: 9
-      pivot: {x: 0.3989, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5352a70f307a12c48bc48bae5cf4eb65
-      internalID: 764152143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: knight_attack_spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 532
-        y: 0
-        width: 100
-        height: 78
-      alignment: 9
-      pivot: {x: 0.394, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc94a8bcf6c5eb6409da1abbdac47839
-      internalID: -332804362
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -231,15 +126,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      knight_attack_spritesheet_0: -634472916
-      knight_attack_spritesheet_1: 617390678
-      knight_attack_spritesheet_2: -1130467226
-      knight_attack_spritesheet_3: 764152143
-      knight_attack_spritesheet_4: -332804362
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 1
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
