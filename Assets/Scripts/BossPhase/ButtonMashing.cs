@@ -25,6 +25,8 @@ public class ButtonMashing : MonoBehaviour {
       public Animator aKey;
        
       public Animator dKey;
+
+      public CanvasGroup attackMenu;
       
       public void ButtonMashingEvent() {
         Debug.Log("ButtonMashingEvent");
@@ -43,6 +45,7 @@ public class ButtonMashing : MonoBehaviour {
 
       public IEnumerator InitializeMasher() {
         mashAmount = 0;
+        attackMenu.gameObject.SetActive(false);
         yield return null;
       }
 
@@ -84,6 +87,7 @@ public class ButtonMashing : MonoBehaviour {
         var canvGroup = GetComponent<CanvasGroup>();
         resultText.text = damageDealt.ToString();
         resultText.gameObject.SetActive(true);
+        attackMenu.gameObject.SetActive(true);
         float timeCounter = 0f;
         float timeBeforeDisable = 3.0f;
         while (timeCounter <= 1f) {

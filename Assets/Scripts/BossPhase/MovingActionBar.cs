@@ -15,6 +15,9 @@ public class MovingActionBar : MonoBehaviour
     // speed the bar will move from left -> right
     public float speed;
 
+    // is this a cleave?
+    public bool isCleave;
+
     // moving bar for VISUAL
     public RectTransform movingActionBar;
 
@@ -34,11 +37,16 @@ public class MovingActionBar : MonoBehaviour
 
     public TMPro.TextMeshProUGUI resultText;
 
+    public TMPro.TextMeshProUGUI damageText;
+
     // the boss model to deal damage to
     public BossModel boss;
 
     // the player to trigger animation
     public Animator player;
+
+    // set the other buttons to inactive when the attack is going on
+    public CanvasGroup attackMenu;
 
     // used during damage calculation
     private int bossDamageTaken;
@@ -71,15 +79,43 @@ public class MovingActionBar : MonoBehaviour
 
     // starts the moving action bar attack event
     public IEnumerator MovingActionBarEventHandler() {
+        resultText.gameObject.SetActive(false);
+        damageText.gameObject.SetActive(false);
         yield return StartCoroutine(InitBar());
-        yield return StartCoroutine(StartBarMove());
+        if (isCleave) {
+            yield return StartCoroutine(StartBarMove(0.8f));
+            yield return StartCoroutine(BetweenBars());
+            yield return StartCoroutine(StartBarMove(1.2f));
+            yield return StartCoroutine(BetweenBars());
+            yield return StartCoroutine(StartBarMove(1.1f));
+        } else {
+            yield return StartCoroutine(StartBarMove(1.0f));
+        }
         yield return StartCoroutine(EndEvent());
     }
 
+    public IEnumerator BetweenBars() {
+        // reset for next run
+        actionFinished = false;
+        visualMovingActionBarEnd = false;
+
+        float timeBeforeDisable = 2.0f;
+        float timeCounter = 0f;
+        while (timeCounter < timeBeforeDisable) {
+            timeCounter += Time.deltaTime;
+            yield return null;
+        }
+        damageText.text = "";
+    }
+
     public IEnumerator InitBar() {
+        // set the buttons to inactive
+        attackMenu.gameObject.SetActive(false);
+
         var canvGroup = GetComponent<CanvasGroup>();
 
         resultText.text = "";
+        damageText.text = "";
 
         // some safety checks and "resetters" here
         actionFinished = false;
@@ -96,18 +132,20 @@ public class MovingActionBar : MonoBehaviour
             canvGroup.alpha = Mathf.Lerp(canvGroup.alpha, 1, timeCounter / fadeDuration);
             yield return null;
         }
-        resultText.gameObject.SetActive(false);
         // TODO: disable attack menu options
     }
 
-    public IEnumerator StartBarMove() {
+    public IEnumerator StartBarMove(float speedAdjustment) {
+        movingActionBar.position = startPoint.position;
+        movingActionBarInternal.position = startPoint.position;
+
         // while no finished action, keep moving the bar and doing distance checks
         while (!actionFinished) {
             // 1. move bar towards the endPoint
             if (!visualMovingActionBarEnd) {
-                movingActionBar.position = Vector2.MoveTowards(movingActionBar.position, endPoint.position, speed * Time.deltaTime);
+                movingActionBar.position = Vector2.MoveTowards(movingActionBar.position, endPoint.position, speedAdjustment * speed * Time.deltaTime);
             }
-            movingActionBarInternal.position = Vector2.MoveTowards(movingActionBarInternal.position, endPointInternal.position, speed * Time.deltaTime);
+            movingActionBarInternal.position = Vector2.MoveTowards(movingActionBarInternal.position, endPointInternal.position, speedAdjustment * speed * Time.deltaTime);
 
             // 2. calculate distances, determine result (miss, sweet spot, normal), calculate damage to give to boss
             // based on distance of moving bar to those points
@@ -118,13 +156,15 @@ public class MovingActionBar : MonoBehaviour
                 // immediately calculate the current position, will be either a NORMAL or SWEET attack
                 if (Vector2.Distance(movingActionBarInternal.position, sweetPoint.position) < tolerance) {
                     resultText.text = "SWEET!";
-                    bossDamageTaken = 75;
+                    damageText.text = "75";
+                    bossDamageTaken += 75;
                     player.SetTrigger("Attack");
                     SweetSpot.Play();
                 }
                 else {
                     resultText.text = "NORMAL";
-                    bossDamageTaken = 30;
+                    damageText.text = "30";
+                    bossDamageTaken += 30;
                     player.SetTrigger("Attack");
                     Normal.Play();
                 }
@@ -136,10 +176,10 @@ public class MovingActionBar : MonoBehaviour
                 }
                 if (Vector2.Distance(movingActionBarInternal.position, endPointInternal.position) < tolerance) {
                     resultText.text = "MISS";
+                    damageText.text = "0";
                     // boss doesn't take damage here
-                    bossDamageTaken = 0;
+                    bossDamageTaken += 0;
                     actionFinished = true;
-
                     Miss.Play();
                 }
             }
@@ -150,17 +190,20 @@ public class MovingActionBar : MonoBehaviour
 
         // here action is finished
         resultText.gameObject.SetActive(true);
-        boss.TakeDamage(bossDamageTaken);
+        damageText.gameObject.SetActive(true);
     }
 
     public IEnumerator EndEvent() {
         // after damage calculation and some time for attack animation sequences, disable the bar 
+        boss.TakeDamage(bossDamageTaken);
         float timeBeforeDisable = 3.0f;
         float timeCounter = 0f;
         while (timeCounter < timeBeforeDisable) {
             timeCounter += Time.deltaTime;
             yield return null;
         }
+        // set the buttons to active
+        attackMenu.gameObject.SetActive(true);
         // here timeBeforeDisable finish, remove the bar from the screen
         transform.gameObject.SetActive(false);
         // TODO: re-enable menu options, go back to main action menu

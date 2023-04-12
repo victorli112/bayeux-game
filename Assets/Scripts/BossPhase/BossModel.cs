@@ -8,7 +8,9 @@ public class BossModel : MonoBehaviour
 
 	public int maxHealth = 500;
 	public int currentHealth;
+	public PlayerModel player;
 	public HealthBar healthBar;
+	private System.Random random = new System.Random();
 
 	void Start()
 	{
@@ -30,11 +32,23 @@ public class BossModel : MonoBehaviour
 		currentHealth -= damage;
 		healthBar.SetHealth(currentHealth);
 
-		// if (health <= 0)
-		// {
-		// 	Die();
-		// }
+		StartCoroutine(Wrapper());
 	}
+
+	public IEnumerator Wrapper() {
+		yield return StartCoroutine(WaitDamage());
+	}
+
+	public IEnumerator WaitDamage() {
+        float timeCounter = 0f;
+				float timeTotal = 4f;
+        while (timeCounter < timeTotal) {
+            timeCounter += Time.deltaTime;
+            yield return null;
+        }
+				var dmg = random.Next(5, 20);
+				player.TakeDamage(dmg);
+    }
 
 	// void Die()
 	// {
