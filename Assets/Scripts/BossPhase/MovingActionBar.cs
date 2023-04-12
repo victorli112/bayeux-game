@@ -156,15 +156,26 @@ public class MovingActionBar : MonoBehaviour
                 // immediately calculate the current position, will be either a NORMAL or SWEET attack
                 if (Vector2.Distance(movingActionBarInternal.position, sweetPoint.position) < tolerance) {
                     resultText.text = "SWEET!";
-                    damageText.text = "75";
-                    bossDamageTaken += 75;
+                    if (isCleave) {
+                        bossDamageTaken += 30;
+                        damageText.text = "30";
+                    } else {
+                        bossDamageTaken += 75;
+                        damageText.text = "75";
+                    }
                     player.SetTrigger("Attack");
                     SweetSpot.Play();
                 }
                 else {
                     resultText.text = "NORMAL";
-                    damageText.text = "30";
-                    bossDamageTaken += 30;
+                    if (isCleave) {
+                        damageText.text = "15";
+                        bossDamageTaken += 15;
+                    } else {
+                        damageText.text = "30";
+                        bossDamageTaken += 30;
+                    }
+                    
                     player.SetTrigger("Attack");
                     Normal.Play();
                 }

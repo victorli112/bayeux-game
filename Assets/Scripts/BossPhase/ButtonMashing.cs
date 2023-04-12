@@ -26,12 +26,18 @@ public class ButtonMashing : MonoBehaviour {
        
       public Animator dKey;
 
+      // the player to trigger animation
+      public Animator playerModel;
+
+      public Animator arrowAnim;
+
       public CanvasGroup attackMenu;
       
       public void ButtonMashingEvent() {
         Debug.Log("ButtonMashingEvent");
         transform.gameObject.SetActive(true);
         resultText.gameObject.SetActive(false);
+        arrowAnim.gameObject.SetActive(false);
         aKey.gameObject.SetActive(true);
         dKey.gameObject.SetActive(true);
         StartCoroutine(ButtonMashEventHandler());
@@ -75,7 +81,11 @@ public class ButtonMashing : MonoBehaviour {
         
         // damage calculation step
         damageDealt = mashAmount * 2;
+        playerModel.SetTrigger("Attack");
         boss.TakeDamage(damageDealt);
+        arrowAnim.gameObject.SetActive(true);
+        arrowAnim.SetTrigger("arrowplay");
+        arrow.Play();
         Debug.Log(damageDealt.ToString() + " dealt, mash amount: " + mashAmount.ToString());
       }
 
@@ -83,7 +93,6 @@ public class ButtonMashing : MonoBehaviour {
         Debug.Log("before");
         aKey.gameObject.SetActive(false);
         dKey.gameObject.SetActive(false);
-        arrow.Play();
         var canvGroup = GetComponent<CanvasGroup>();
         resultText.text = damageDealt.ToString();
         resultText.gameObject.SetActive(true);
@@ -91,6 +100,9 @@ public class ButtonMashing : MonoBehaviour {
         float timeCounter = 0f;
         float timeBeforeDisable = 3.0f;
         while (timeCounter <= 1f) {
+          if (timeCounter > 0.5f) {
+            arrowAnim.gameObject.SetActive(false);
+          }
           timeCounter += Time.deltaTime / timeBeforeDisable;
           yield return null;
         }
