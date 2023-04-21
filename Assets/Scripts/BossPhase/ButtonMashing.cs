@@ -88,7 +88,6 @@ public class ButtonMashing : MonoBehaviour {
         var canvGroup = GetComponent<CanvasGroup>();
         resultText.text = damageDealt.ToString();
         resultText.gameObject.SetActive(true);
-        attackMenu.gameObject.SetActive(true);
         float timeCounter = 0f;
         float timeBeforeDisable = 3.0f;
         while (timeCounter <= 1f) {
@@ -97,5 +96,8 @@ public class ButtonMashing : MonoBehaviour {
         }
         resultText.gameObject.SetActive(false);
         transform.gameObject.SetActive(false);
+        if (boss.currentHealth > 0) {
+          attackMenu.gameObject.SetActive(true);
+        }
       }   
 }

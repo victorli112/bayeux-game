@@ -213,11 +213,13 @@ public class MovingActionBar : MonoBehaviour
             timeCounter += Time.deltaTime;
             yield return null;
         }
-        // set the buttons to active
-        attackMenu.gameObject.SetActive(true);
-        // here timeBeforeDisable finish, remove the bar from the screen
-        transform.gameObject.SetActive(false);
-        // TODO: re-enable menu options, go back to main action menu
+        if (boss.currentHealth > 0) {
+            // set the buttons to active
+            attackMenu.gameObject.SetActive(true);
+            // here timeBeforeDisable finish, remove the bar from the screen
+            transform.gameObject.SetActive(false);
+            // TODO: re-enable menu options, go back to main action menu
+        }
 
     }
 
