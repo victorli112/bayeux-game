@@ -12,6 +12,8 @@ public class BossModel : MonoBehaviour
 	public HealthBar healthBar;
 	private System.Random random = new System.Random();
 
+	public BossDeathDialog deathDialog;
+
 	void Start()
 	{
 		healthBar.SetMaxHealth(maxHealth);
@@ -33,6 +35,10 @@ public class BossModel : MonoBehaviour
 		healthBar.SetHealth(currentHealth);
 
 		StartCoroutine(Wrapper());
+
+		if (currentHealth <= 0) {
+			deathDialog.StartDialog();
+		}
 	}
 
 	public IEnumerator Wrapper() {
