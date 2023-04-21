@@ -1278,7 +1278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54bab761444891e4c891afc46e3e79fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelName: BossScene
+  LevelName: EndScene
 --- !u!114 &328249313
 MonoBehaviour:
   m_ObjectHideFlags: 0
