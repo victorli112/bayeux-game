@@ -9,8 +9,6 @@ public class ButtonMashing : MonoBehaviour {
 
       private int damageDealt;
 
-      public AudioSource arrow;
-
       // keep track of the previous key, player must alternate between A and D
       private string prevKey = "";
 
@@ -29,15 +27,12 @@ public class ButtonMashing : MonoBehaviour {
       // the player to trigger animation
       public Animator playerModel;
 
-      public Animator arrowAnim;
-
       public CanvasGroup attackMenu;
       
       public void ButtonMashingEvent() {
         Debug.Log("ButtonMashingEvent");
         transform.gameObject.SetActive(true);
         resultText.gameObject.SetActive(false);
-        arrowAnim.gameObject.SetActive(false);
         aKey.gameObject.SetActive(true);
         dKey.gameObject.SetActive(true);
         StartCoroutine(ButtonMashEventHandler());
@@ -83,9 +78,6 @@ public class ButtonMashing : MonoBehaviour {
         damageDealt = mashAmount * 2;
         playerModel.SetTrigger("Attack");
         boss.TakeDamage(damageDealt);
-        arrowAnim.gameObject.SetActive(true);
-        arrowAnim.SetTrigger("arrowplay");
-        arrow.Play();
         Debug.Log(damageDealt.ToString() + " dealt, mash amount: " + mashAmount.ToString());
       }
 
@@ -100,9 +92,6 @@ public class ButtonMashing : MonoBehaviour {
         float timeCounter = 0f;
         float timeBeforeDisable = 3.0f;
         while (timeCounter <= 1f) {
-          if (timeCounter > 0.5f) {
-            arrowAnim.gameObject.SetActive(false);
-          }
           timeCounter += Time.deltaTime / timeBeforeDisable;
           yield return null;
         }
