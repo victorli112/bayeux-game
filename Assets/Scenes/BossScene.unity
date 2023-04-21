@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7754817}
   - component: {fileID: 7754818}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: yellow_diagonal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -568,7 +568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 62612187}
   - component: {fileID: 62612188}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: red_diagonal (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -874,7 +874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 149520616}
   - component: {fileID: 149520617}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: red_diagonal (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -958,7 +958,7 @@ GameObject:
   m_Component:
   - component: {fileID: 171092071}
   - component: {fileID: 171092072}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: lion_motif_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -973,7 +973,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171092070}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.129999, y: 9.15, z: -2}
+  m_LocalPosition: {x: -10.129999, y: 9.15, z: 0}
   m_LocalScale: {x: 4.4, y: 4.4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1042,7 +1042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 171616436}
   - component: {fileID: 171616437}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: lion_motif_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1126,7 +1126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 172530408}
   - component: {fileID: 172530409}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1171,7 +1171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 198174686}
   - component: {fileID: 198174687}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: spiral_motif2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1255,7 +1255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 218591994}
   - component: {fileID: 218591995}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: red_diagonal (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1339,7 +1339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 222436771}
   - component: {fileID: 222436772}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: lion_motif_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1423,7 +1423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 226273765}
   - component: {fileID: 226273766}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: background_bayeux
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1940,7 +1940,7 @@ GameObject:
   m_Component:
   - component: {fileID: 265142829}
   - component: {fileID: 265142830}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: bird_motif_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1955,7 +1955,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265142828}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.63, y: 9.16, z: -2}
+  m_LocalPosition: {x: -18.63, y: 9.16, z: 0}
   m_LocalScale: {x: 1.6452, y: 1.6452, z: 1.6452}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2229,7 +2229,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285928790}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -925.5, y: -536.36, z: -1.8}
+  m_LocalPosition: {x: -925.5, y: -536.36, z: 0}
   m_LocalScale: {x: 13, y: 13, z: 13}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2595,7 +2595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 374147628}
   - component: {fileID: 374147629}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: red_diagonal (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3304,7 +3304,7 @@ SpriteRenderer:
   m_Size: {x: 0.82, y: 0.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &459055747
@@ -3332,7 +3332,7 @@ GameObject:
   m_Component:
   - component: {fileID: 567647890}
   - component: {fileID: 567647891}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: bird_motif_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3347,7 +3347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567647889}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.550001, y: 9.16, z: -2}
+  m_LocalPosition: {x: 16.550001, y: 9.16, z: 0}
   m_LocalScale: {x: 1.6452, y: 1.6452, z: 1.6452}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3492,7 +3492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 590350562}
   - component: {fileID: 590350563}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: spiral_motif (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3576,7 +3576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 591621466}
   - component: {fileID: 591621467}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: lion_motif_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3660,7 +3660,7 @@ GameObject:
   m_Component:
   - component: {fileID: 597348909}
   - component: {fileID: 597348910}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: red_diagonal (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4053,7 +4053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 684835447}
   - component: {fileID: 684835448}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: background_bayeux
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4155,7 +4155,7 @@ GameObject:
   m_Component:
   - component: {fileID: 685736962}
   - component: {fileID: 685736963}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: bird_motif_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4239,7 +4239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 738336761}
   - component: {fileID: 738336762}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: blue_diagonal (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4323,7 +4323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 750189272}
   - component: {fileID: 750189273}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: spiral_motif2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4655,7 +4655,7 @@ GameObject:
   m_Component:
   - component: {fileID: 791194766}
   - component: {fileID: 791194767}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: bird_motif_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4875,7 +4875,7 @@ GameObject:
   m_Component:
   - component: {fileID: 800217621}
   - component: {fileID: 800217622}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: blue_diagonal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5206,7 +5206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 896349110}
   - component: {fileID: 896349111}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: bird_motif_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5290,7 +5290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 897329229}
   - component: {fileID: 897329230}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5335,7 +5335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 915435083}
   - component: {fileID: 915435084}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: spiral_motif
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5571,7 +5571,7 @@ GameObject:
   m_Component:
   - component: {fileID: 966336974}
   - component: {fileID: 966336973}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5616,7 +5616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 971799630}
   - component: {fileID: 971799631}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: red_diagonal (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5993,7 +5993,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1008501688}
   - component: {fileID: 1008501689}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: lion_motif_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6249,7 +6249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1062405939}
   - component: {fileID: 1062405940}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: spiral_motif2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6906,7 +6906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1216325648}
   - component: {fileID: 1216325649}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: blue_diagonal (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6990,7 +6990,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1235505177}
   - component: {fileID: 1235505178}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: red_diagonal (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7449,7 +7449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1279408700}
   - component: {fileID: 1279408701}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: spiral_motif (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7533,7 +7533,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1280921337}
   - component: {fileID: 1280921338}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: blue_diagonal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7693,7 +7693,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1318123327}
   - component: {fileID: 1318123328}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: red_diagonal (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8134,7 +8134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1366135887}
   - component: {fileID: 1366135886}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: yellow_diagonal (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8346,7 +8346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1380433223}
   - component: {fileID: 1380433224}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: red_diagonal (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8430,7 +8430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1382387035}
   - component: {fileID: 1382387036}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: blue_diagonal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8590,7 +8590,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1455280304}
   - component: {fileID: 1455280305}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: bird_motif_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8674,7 +8674,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1470051854}
   - component: {fileID: 1470051855}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: red_diagonal (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8826,7 +8826,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1474731712}
   - component: {fileID: 1474731713}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: yellow_diagonal (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9046,7 +9046,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1550634480}
   - component: {fileID: 1550634481}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: yellow_diagonal (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9130,7 +9130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1553437334}
   - component: {fileID: 1553437333}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: yellow_diagonal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9462,7 +9462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1594879477}
   - component: {fileID: 1594879478}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: blue_diagonal (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9757,7 +9757,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1626215400}
   - component: {fileID: 1626215401}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: yellow_diagonal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10053,7 +10053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1666732812}
   - component: {fileID: 1666732813}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: spiral_motif
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10273,7 +10273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1690848815}
   - component: {fileID: 1690848816}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: spiral_motif2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10357,7 +10357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1724419694}
   - component: {fileID: 1724419695}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: bird_motif_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10441,7 +10441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1770783048}
   - component: {fileID: 1770783049}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: blue_diagonal (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10525,7 +10525,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1776579734}
   - component: {fileID: 1776579735}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: lion_motif_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10540,7 +10540,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776579733}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.470001, y: 9.15, z: -2}
+  m_LocalPosition: {x: 7.470001, y: 9.15, z: 0}
   m_LocalScale: {x: -4.4, y: 4.4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10745,7 +10745,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1801324866}
   - component: {fileID: 1801324867}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: red_diagonal (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11122,7 +11122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1875119268}
   - component: {fileID: 1875119269}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: bird_motif_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11137,7 +11137,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875119267}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -1.9200001, y: 9.17, z: -2}
+  m_LocalPosition: {x: -1.9200001, y: 9.17, z: 0}
   m_LocalScale: {x: 1.6452, y: 1.6452, z: 1.6452}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11206,7 +11206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1888024300}
   - component: {fileID: 1888024301}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: bird_motif_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11366,7 +11366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1904358472}
   - component: {fileID: 1904358473}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: blue_diagonal (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11450,7 +11450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1908815671}
   - component: {fileID: 1908815672}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: background_bayeux
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11911,7 +11911,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1951821092}
   - component: {fileID: 1951821093}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: red_diagonal (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12071,7 +12071,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1986064682}
   - component: {fileID: 1986064683}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: spiral_motif (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12291,7 +12291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2037505882}
   - component: {fileID: 2037505883}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: spiral_motif
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12476,7 +12476,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093680188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.5, y: 11.2, z: -10}
+  m_LocalPosition: {x: 19.5, y: 11.2, z: -1}
   m_LocalScale: {x: 2.5822, y: 3.48597, z: 2.5822}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12629,7 +12629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2118111532}
   - component: {fileID: 2118111533}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: spiral_motif2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12713,7 +12713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2137997468}
   - component: {fileID: 2137997469}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: blue_diagonal (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12873,7 +12873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2144952533}
   - component: {fileID: 2144952534}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: spiral_motif2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
